@@ -53,9 +53,10 @@ class GuessNumber():
         for num in range(8):
             a = self.sort_number(list_num)
             # Validates if the number is not repeated and add to the list: num_sort
-            if a is not self.num_sort:
-                self.num_sort.append(a)
-            pass
+            if a is self.num_sort:
+                continue
+            self.num_sort.append(a)
+
         # Draw and set the number of the day
         self.num_day = self.sort_number(self.num_sort)
         

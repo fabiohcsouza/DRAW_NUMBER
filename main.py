@@ -6,21 +6,22 @@ a = GuessNumber()
 c = a.num_day
 n = a.num_sort
 t = a.attempts
+p = a.punctuation
 
 linha = ('-'+'#'*40+'-')
 
 while True:
 
     print("""
--###############- Adivinhe o numero! -###############-
-
+-###############- Adivinhe o numero -###############-
+  Pontuação: {}                        Tentativas: {}
             Escola um dos numeros abaixo
 
                  {} | {} | {} | {}
                  {} | {} | {} | {}
 
 -####################################################-
-        """.format(n[0], n[1], n[2], n[3], n[4], n[5], n[6], n[7]))
+        """.format(p, t, n[0], n[1], n[2], n[3], n[4], n[5], n[6], n[7]))
 
     h = int(input(": "))
     print(linha)
@@ -44,4 +45,4 @@ while True:
 -#####################################-
         """)
         break
-    time.sleep(2)
+    time.sleep(1)
